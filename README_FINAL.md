@@ -107,6 +107,7 @@ docker run -p 8001:8001 abalone-prediction
 ```
 
 The project should now be running locally, and you can access it at `http://localhost:8001`.
+Test the API with `http://localhost:8001/docs`.
 
 ## Contributing
 
