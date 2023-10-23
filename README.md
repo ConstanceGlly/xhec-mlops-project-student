@@ -107,8 +107,8 @@ docker build -t abalone-prediction .
 docker run -p 8001:8001 abalone-prediction
 ```
 
-The project should now be running locally, and you can access it at `http://localhost:8001`.
-Test the API with `http://localhost:8001/docs`.
+- The project should now be running locally, and you can access it at `http://localhost:8001`.
+- Test the API with `http://localhost:8001/docs`.
 
 ## Contributing
 
@@ -130,9 +130,9 @@ This project is licensed under the MIT License - see the [LICENSE](MIT-LICENSE.t
 
 ## Participants
 
-Constance Guelluy - ConstanceGlly
-Quentin Stroobants - quentinstroobants
-Nathan Rozot - rozmax
-Cedomir Ljubic - Cedotorpedo
-Elie Cochard - Cochmix22
-Diane Paul - dianepaul
+- Constance Guelluy - ConstanceGlly
+- Quentin Stroobants - quentinstroobants
+- Nathan Rozot - rozmax
+- Cedomir Ljubic - Cedotorpedo
+- Elie Cochard - Cochmix22
+- Diane Paul - dianepaul
