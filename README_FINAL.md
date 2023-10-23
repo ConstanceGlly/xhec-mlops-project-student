@@ -40,6 +40,7 @@ still to adapt
   - [Contributing](#contributing)
   - [License](#license)
   - [Acknowledgments](#acknowledgments)
+  - [Participants](#participants)
 
 
 ## Project Overview
@@ -67,33 +68,47 @@ Follow these instructions to get a copy of the project up and running on your lo
 1. Clone the repository to your local machine:
 ```bash
 git clone https://github.com/ConstanceGlly/xhec-mlops-project-student.git
-cd abalone-age-prediction
+cd xhec-mlops-project-student
 ```
 
-1. Create a Conda environment using the provided environment.yml file:
+2. Create a Conda environment using the provided environment.yml file:
 ```bash
 conda env create -f environment.yml
 conda activate abalone-prediction-env
 ```
 
-2. Compile the requiremnts and install them:
+3. Install the requirements:
 ```bash
-pip-compile requirements.in
-pip istall -r requirements.txt
+  # Compile requirements.in to requirements.txt
+  pip-compile --output-file=requirements.txt requirements.in
+  # Install dependencies from requirements.txt
+  pip install -r requirements.txt
 ```
 
+4. Launch prefect (in another terminal):
+```bash
+  conda activate abalone-prediction-env
+  prefect server start --host 0.0.0.0
+```
 
-1. Build the Docker image:
+5. Train the model:
+```bash
+  cd src/modelling
+  python workflows.py
+```
+
+6. Build the Docker image:
 ```bash
 docker build -t abalone-prediction .
 ```
 
-1. Run the Docker container:
+7. Run the Docker container:
 ```bash
-docker run -p 5000:5000 abalone-prediction
+docker run -p 8001:8001 abalone-prediction
 ```
 
-The project should now be running locally, and you can access it at `http://localhost:5000`.
+The project should now be running locally, and you can access it at `http://localhost:8001`.
+Test the API with `http://localhost:8001/docs`.
 
 ## Contributing
 
@@ -112,3 +127,12 @@ This project is licensed under the MIT License - see the [LICENSE](MIT-LICENSE.t
 ## Acknowledgments
 
 - Kaggle for providing the Abalone dataset.
+
+## Participants
+
+Constance Guelluy - ConstanceGlly
+Quentin Stroobants - quentinstroobants
+Nathan Rozot - rozmax
+Cedomir Ljubic - Cedotorpedo
+Elie Cochard - Cochmix22
+Diane Paul - dianepaul
